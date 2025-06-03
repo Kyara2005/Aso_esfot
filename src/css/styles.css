@@ -1,0 +1,64 @@
+/* Declaration of variables CSS */
+:root {
+    --colorUno: #6C0063;
+    --colorDos: #D6006D;
+    --colorTres: #b0005c;
+    --colorCuatro: #ffe6f1;
+    --colorCinco: #FFAEC9;
+    --colorSeis: #000000;
+    --fuentePrincipal: "Roboto", sans-serif;
+    --fuenteSecundaria: "Orbitron", sans-serif;
+}
+html {
+    background-color: var(--colorUno);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuentePrincipal);
+}
+
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: url('../images/estudiantes_jugando.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: var(--colorDos);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--colorTres);
+}
+
