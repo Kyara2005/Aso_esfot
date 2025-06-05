@@ -1,0 +1,196 @@
+/* Declaration of variables CSS */
+:root {
+    --colorUno: #6C0063;
+    --colorDos: #D6006D;
+    --colorTres: #b0005c;
+    --colorCuatro: #ffe6f1;
+    --colorCinco: #FFAEC9;
+    --colorSeis: #000000;
+    --fuentePrincipal: "Roboto", sans-serif;
+    --fuenteSecundaria: "Orbitron", sans-serif;
+}
+html {
+    background-color: var(--colorUno);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuentePrincipal);
+}
+
+body {
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: url('../images/estudiantes_felices.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background-color: var(--colorDos);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--colorUno);
+}
+.about__info {
+    background-color: var(--colorUno);
+    color: white;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 2rem;
+}
+
+.about__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about__text {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+@media (min-width: 768px) {
+    .about__text {
+        font-size: 2rem;
+    }
+
+    .about__title {
+        font-size: 3.5rem;
+    }
+}
+
+/*Parte 6(Informacion)-(Jhonatan Ruiz)*/
+
+.footer {
+  background: linear-gradient(90deg, var(--colorUno), var(--colorTres));
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.app-buttons img {
+  height: auto;
+  width: 200px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.app-buttons img:hover {
+  transform: scale(1.05);
+}
+
+  .funcionalidades {
+    background-color: #1c0029;
+    padding: 3rem 1rem;
+  }
+
+  .funcionalidades__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .funcionalidad__item {
+    background-color: #8e296a; 
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .funcionalidad__item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+  }
+
+  .funcionalidad__item p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .funcionalidad__item:hover {
+    transform: scale(1.05);
+  }
