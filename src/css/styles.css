@@ -189,6 +189,15 @@ header p {
     font-weight: 300;
     font-size: 0.95rem;
 }
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .step-box {
+        width: 100%;
+    }
+} 
 /*Parte 5(Equipo)-(Melany Perugachi)*/
 .explora {
     background-color: white;
