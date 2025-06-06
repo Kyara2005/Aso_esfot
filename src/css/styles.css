@@ -91,6 +91,61 @@ header p {
     }
 }
 
+/*Parte 4(Funcionalidades)-(Emilio Gávilanez)*/
+
+.how-it-works__title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin: 30px 0 20px 0;
+    background-color: #861278;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.funcionalidades {
+    background-color: var(--colorFondoFuncionalidades);
+    padding: 3rem 1rem;
+}
+
+.funcionalidades__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.funcionalidad__item {
+    background-color: var(--colorTarjetaFuncionalidad);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.funcionalidad__item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.funcionalidad__item p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--fuentePrincipal);
+}
+
+.funcionalidad__item:hover {
+    transform: scale(1.05);
+}
+
+
 /*Parte 6(Informacion)-(Jhonatan Ruiz)*/
 
 .footer {
