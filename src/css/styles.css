@@ -186,7 +186,7 @@ header.main-header::before {
     display: flex;
     gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .main-nav {
         display: flex;
         flex-direction: column;
@@ -218,7 +218,6 @@ header.main-header::before {
         margin-top: 10px;
     }
 }
-
 
 /* --- Hero Text Section --- */
 .hero-text {
@@ -656,10 +655,10 @@ hr{
     padding: 4rem 2rem
 }
 .contact__image {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
+    width: 300px; /* o el valor que quieras */
+    margin: 0 auto;
+    display: block;
 }
 
 .contact__image img {
@@ -706,14 +705,15 @@ hr{
     width: 6rem;
 }
 
-@media (width:768px) {
+@media (max-width:768px) {
 .contact{
     display: flex;
     gap: 2rem;
+    flex-direction: column;
 }
 .contact__form,
 .contact__image{
-    width: 50%;
+    width: 100%;
 }
 .contact__form{
     margin: 0;
