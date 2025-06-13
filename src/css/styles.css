@@ -150,6 +150,8 @@ header.main-header::before {
     list-style: none;
     display: flex;
     gap: 35px;
+    padding: 0 40px; /* Ajusta según lo que necesites */
+
 }
 
 .main-nav ul li a {
@@ -184,35 +186,50 @@ header.main-header::before {
     display: flex;
     gap: 20px;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main-nav .logo {
+        order: -1; /* Asegura que el logo esté primero */
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
     .main-nav ul {
-        gap: 15px; /* Reduce separación entre botones */
-        flex-wrap: wrap; /* Permite que se vayan a segunda línea si no entran */
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
     }
 
     .main-nav ul li a {
-        font-size: 0.95em; /* Reduce el tamaño del texto */
-        padding: 6px 0; /* Menos padding vertical */
+        font-size: 1em;
+        padding: 6px 10px;
     }
 
     .header-cta-buttons {
-        gap: 10px; /* Menos espacio entre botones */
-        flex-wrap: wrap; /* Que se acomoden si no caben */
+        flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
     }
 }
+
 
 /* --- Hero Text Section --- */
 .hero-text {
     text-align: center;
-    padding-bottom: 120px; /* Más padding inferior */
+    padding-bottom: 120px; 
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centra el contenido verticalmente */
     align-items: center;
-    margin-bottom: -60px; /* Superposición un poco más agresiva */
+    margin-bottom: -60px; /* Superposición */
     position: relative;
     z-index: 5;
 }
@@ -232,7 +249,6 @@ header.main-header::before {
     color: white;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    padding: 2rem;
 }
 
 .about__title {
@@ -259,7 +275,7 @@ header.main-header::before {
 /* --- Sección Problema-Solución --- */
 .problem-solution-section {
     background-color: var(--colorUno);
-    padding: 80px 0;
+    padding-top: 40px;
 }
 
 .problem-solution-grid {
@@ -601,4 +617,105 @@ header.main-header::before {
 
 .funcionalidad__item:hover {
     transform: scale(1.05);
+}
+/* INFORMACION */
+.call,
+.write{
+    text-align: center;
+    color: var(--colorSeis);
+
+}
+
+hr{
+    border: 1px solid var(--colorDos);
+}
+.footer__copy{
+    color: var(--colorUno);
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+@media (width >= 768px) {
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+.call,
+.write{
+    text-align: left;
+}
+}
+/* PREGUNTAS */
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem
+}
+.contact__image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.contact__form{
+    background-color: rgba(166, 166, 166, 0.17);
+    padding: 1.5rem;
+    width: 50%;
+    border-radius: 10px;
+}
+.contact__title{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact__form input,
+.contact__form textarea,
+.checkbox__label input[type="checkbox"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--colorCinco);
+    background-color: rgba(217, 217, 217, 1);
+}
+
+.checkbox__label{
+    font-weight: 600;
+}
+
+.contact__form form button {
+    align-self: flex-end;
+    border: 1px solid var(--colorDos);
+    width: 6rem;
+}
+
+@media (width:768px) {
+.contact{
+    display: flex;
+    gap: 2rem;
+}
+.contact__form,
+.contact__image{
+    width: 50%;
+}
+.contact__form{
+    margin: 0;
+}
 }
