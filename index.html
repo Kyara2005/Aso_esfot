@@ -13,85 +13,145 @@
     <link rel="shortcut icon" href="./src/images/logo-vibe-u.png" type="image/x-icon" />
 </head>
 <body>
-    <header>
-        <h1>VIBE-U</h1>
-        <p>La app que pone a la U  en modo social</p>
-        <div class="btn-container">
-            <a href="#" class="btn">Únete ahora</a>
-            <a href="#como-funciona" class="btn">Cómo funciona</a>
-        </div>
-    </header>
-    <div class="about__info">
-    <h2 class="about__title">Que es Vibe-U</h2>
-    <p class="about__text">
-      Es una app hecha por y para estudiantes. Te ayuda a conocer gente nueva de otras universidades, formar parte de comunidades con intereses comunes y asistir a eventos que realmente valen la pena.
-    </p>
-    <section class="funcionalidades">
-  <div class="funcionalidades__grid">
-    <div class="funcionalidad__item">
-      <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="Haz nuevos amigos" />
-      <p>Haz nuevos amigos</p>
+  <header class="main-header">
+    <div class="header-content">
+      <a href="#" class="logo-link">
+        <img src="./src/images/logo-vibe-u.png" alt="Vibe-U logo" class="header-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#que-es-vibe-u">¿Qué es Vibe-U?</a></li>
+          <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#funcionlidad">Beneficios</a></li>
+          <li><a href="#explora-conecta">Explora y Conecta</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="funcionalidad__item">
-      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Únete a comunidades" />
-      <p>Únete a comunidades</p>
+    <div class="header-cta-buttons">
+      <a href="#descarga" class="btn btn-primary">Descarga la App</a>
     </div>
-    <div class="funcionalidad__item">
-      <img src="https://cdn-icons-png.flaticon.com/512/4221/4221927.png" alt="Asiste a eventos" />
-      <p>Asiste a eventos</p>
+    <div class="hero-text">
+      <p>La app que pone a la U en modo social</p>
+      <div class="btn-container">
+        <a href="#descarga" class="btn">Únete ahora</a>
+        <a href="#como-funciona" class="btn btn-secondary">Cómo funciona</a>
     </div>
-    <div class="funcionalidad__item">
-      <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Conecta por afinidad" />
-      <p>Conecta por afinidad</p>
-    </div>
-  </div>
-            <!-- /*Parte 4(Funcionalidades)-(Emilio Gávilanez)*/ -->
-            
-<section class="funcionalidades">
-  <h2 class="how-it-works__title">¿Cómo funciona?</h2>
-  <div class="steps">   
-    <div class="step-box">
-      <img src="https://cdn-icons-png.flaticon.com/128/8224/8224757.png" alt="Icono perfil universitario">
-      <h3>CREA<br><span>tu perfil universitario!!</span></h3>
-    </div>
-    <div class="step-box">
-      <img src="https://cdn-icons-png.flaticon.com/128/10351/10351986.png" alt="Icono eventos y comunidades">
-      <h3>DESCUBRE<br><span>eventos y comunidades</span></h3>
-    </div>
-    <div class="step-box">
-      <img src="https://cdn-icons-png.flaticon.com/128/18868/18868531.png" alt="Icono amigos reales">
-      <h3>CONECTA<br><span>y haz amigos reales</span></h3>
-    </div>
-  </div>
-</section>
+  </header>
 
-  <section class="explora-conecta">
-    <h2>Explora y Conecta</h2>
-    <div class="explora-conecta__container">
+  <main>
+    <section class="about__info" id="que-es-vibe-u">
+      <div class="container">
+        <h2 class="about__title">¿Que es Vibe-U?</h2>
+        <p class="about__text">
+          Es una app hecha por y para estudiantes. Te ayuda a conocer gente nueva de otras universidades, formar parte de comunidades con intereses comunes y asistir a eventos que realmente valen la pena.
+        </p>
+      </div>
+    </section>
+
+    <section class="problem-solution-section">
+      <div class="container">
+        <h2 class="section-title">¿Te sientes desconectado en la universidad?</h2>
+        <div class="problem-solution-grid">
+          <div class="problem-item">
+            <h3>El Problema</h3>
+            <p>A veces, la vida universitaria puede ser un reto. Es difícil conocer gente fuera de tus clases, encontrar eventos que te interesen o unirte a grupos con tus mismos intereses. ¿Te sientes solo o te pierdes de experiencias valiosas?</p>
+          </div>
+          <div class="solution-item">
+            <h3>La Solución: Vibe-U</h3>
+            <p>Vibe-U te conecta instantáneamente con el corazón de la vida universitaria. Descubre amistades auténticas, eventos emocionantes en tu campus y comunidades que realmente te entienden. ¡No te quedes fuera y vive la uni al máximo!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="funcionalidades" id="funcionlidad">
+      <div class="container">
+        <h2 class="section-title">Beneficios clave de Vibe-U</h2>
+        <div class="funcionalidades__grid">
+          <div class="funcionalidad__item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="Haz nuevos amigos" />
+            <p>Haz nuevos amigos</p>
+          </div>
+          <div class="funcionalidad__item">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Únete a comunidades" />
+            <p>Únete a comunidades</p>
+          </div>
+          <div class="funcionalidad__item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4221/4221927.png" alt="Asiste a eventos" />
+            <p>Asiste a eventos</p>
+          </div>
+          <div class="funcionalidad__item">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Conecta por afinidad" />
+            <p>Conecta por afinidad</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works-section" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <div class="steps">
+          <div class="step-box">
+            <img src="https://cdn-icons-png.flaticon.com/128/8224/8224757.png" alt="Icono perfil universitario">
+            <h3>CREA<br><span>tu perfil universitario!!</span></h3>
+          </div>
+          <div class="step-box">
+            <img src="https://cdn-icons-png.flaticon.com/128/10351/10351986.png" alt="Icono eventos y comunidades">
+            <h3>DESCUBRE<br><span>eventos y comunidades</span></h3>
+          </div>
+          <div class="step-box">
+            <img src="https://cdn-icons-png.flaticon.com/128/18868/18868531.png" alt="Icono amigos reales">
+            <h3>CONECTA<br><span>y haz amigos reales</span></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explora-conecta" id="explora-conecta">
+      <h2>Explora y Conecta</h2>
+      <div class="explora-conecta__container">
         <div class="paso">
-            <img src="./src/images/evento1.jpg" alt="Evento 1">
-            <h3>Explora eventos en tu universidad</h3>
-            <p>Descubre actividades sociales y académicas en todos los campus.</p>
+          <img src="./src/images/evento1.jpg" alt="Evento 1">
+          <h3>Explora eventos en todos los campus</h3>
+          <p>Descubre actividades sociales y académicas en tu campus.</p>
         </div>
         <div class="paso">
-            <img src="./src/images/paso2.jpg" alt="Paso 2">
-            <h3>Desliza para guardar o ignorar</h3>
-            <p>Elige si te interesan con solo un gesto.</p>
+          <img src="./src/images/paso2.jpg" alt="Paso 2">
+          <h3>Desliza para guardar o ignorar</h3>
+          <p>Elige si te interesan con solo un gesto.</p>
         </div>
         <div class="paso">
-            <img src="./src/images/paso3.jpg" alt="Paso 3">
-            <h3>Haz match con los que asistan</h3>
-            <p>Conéctate con otros estudiantes que asistirán al mismo evento.</p>
+          <img src="./src/images/paso3.jpg" alt="Paso 3">
+          <h3>Haz match con quien vaya</h3>
+          <p>Conéctate con otros estudiantes que asistirán al mismo evento.</p>
         </div>
         <div class="paso">
-            <img src="./src/images/paso4.jpg" alt="Paso 4">
-            <h3>Chatea y coordina</h3>
-            <p>Planea detalles con tus nuevos contactos para asistir juntos.</p>
+          <img src="./src/images/paso4.jpg" alt="Paso 4">
+          <h3>Chatea y coordina</h3>
+          <p>Planea detalles con tus nuevos contactos para asistir juntos.</p>
         </div>
+      </div>
+    </section>
+  </main>
+    
+  <!-- Footer -->
+  <section class="download-cta-section" id="descarga">
+    <div class="container">
+      <h2 class="section-title">¿Listo para vivir la mejor experiencia universitaria?</h2>
+      <p>Descarga Vibe-U hoy y empieza a conectar con tu comunidad universitaria.</p>
+      <div class="app-buttons-cta">
+        <a href="URL_TU_APP_STORE" target="_blank" class="btn btn-appstore">
+          <img src="./src/images/appstore.png" alt="Descargar en App Store">
+          <span></span>
+        </a>
+        <a href="URL_TU_GOOGLE_PLAY" target="_blank" class="btn btn-googleplay">
+          <img src="./src/images/googleplay.png" alt="Descargar en Google Play" />
+          <span></span>
+        </a>
+      </div>
     </div>
-</section>
-  
-  <!-- /*Parte 6(Informacion)-(Jhonatan Ruiz)*/ -->
+  </section>
 
   <footer class="footer">
     <div class="footer-content">
@@ -104,13 +164,19 @@
         </ul>
       </div>
       <div class="footer-section">
-        <h3>Descarga la app</h3>
-        <div class="app-buttons">
-        <a href="#"><img src="./src/images/appstore.png" alt="App Store" /></a>
-        <a href="#"><img src="./src/images/googleplay.png" alt="Google Play" /></a>
+        <h3>Vibe-U</h3>
+        <p>Conectando la vida universitaria.</p>
       </div>
-
+      <div class="footer-section">
+        <h3>Siguenos</h3>
+        <p>
+          <a href="#" style="color: white;margin-right: 10px;">Facebook</a>
+          <a href="#" style="color: white;">Instagram</a>
+        </p>
       </div>
+    </div>
+    <div class="footer-buttom">
+      <p>&copy; 2025 Vibe-U. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>

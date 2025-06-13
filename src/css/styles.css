@@ -10,9 +10,13 @@
     --fuenteSecundaria: "Orbitron", sans-serif;
 }
 html, body {
-  height: 100%;
-  width: 100%;
-  background-color: white;
+    height: 100%;
+    width: 100%;
+    background-color: var(--colorUno);
+    overflow-x: hidden;
+    color: white;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 * {
     margin: 0;
@@ -20,50 +24,209 @@ html, body {
     box-sizing: border-box;
     font-family: var(--fuentePrincipal);
 }
-
-body {
-    color: #333;
-    line-height: 1.6;
-    width: 100%;
-    height: 100%;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header {
-    background: url('../images/estudiantes_felices.jpg') no-repeat center center/cover;
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
-}
-
-header h1 {
-    font-size: 3rem;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-.btn-container {
-    margin-top: 20px;
-}
-
+/* Botones generales */
 .btn {
     display: inline-block;
     margin: 10px;
-    padding: 12px 24px;
+    padding: 14px 28px;
     background-color: var(--colorDos);
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 28px;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--colorTres);
+    transform: translateY(-2px);
 }
 
-.btn:hover {
-    background-color: var(--colorUno);
+.btn-primary {
+    background-color: var(--colorDos);
+    color: var(--white);
+    border: 2px solid var(--colorDos);
 }
+
+.btn-primary:hover {
+    background-color: var(--colorTres);
+    border-color: var(--colorTres);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--colorUno);
+    transform: translateY(-2px);
+}
+
+/* --- Secciones Generales de Contenido --- */
+section {
+    padding: 80px 0;
+    background-color: var(--colorUno);
+    color: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* --- HEADER PRINCIPAL --- */
+header.main-header {
+    background: url('../images/estudiantes_felices.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    min-height: 90vh; /* Aumentado para más espacio en el hero */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    z-index: 0;
+
+}
+
+header.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* Un poco más oscuro para mejor contraste del texto */
+    z-index: -1;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.header-logo {
+    height: 100px; /* Un poco más grande */
+    margin-left: 50px;
+    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6));
+
+}
+
+.site-title {
+    font-family: var(--fuenteSecundaria);
+    font-size: 3.5rem; /* Más grande para destacar */
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Sombra más definida */
+    letter-spacing: 3px; /* Más espaciado entre letras */
+}
+
+/* BOTONES DL MAIN */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.main-nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.15em;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--colorCinco);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.main-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.main-nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.header-cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 480px) {
+    .main-nav ul {
+        gap: 15px; /* Reduce separación entre botones */
+        flex-wrap: wrap; /* Permite que se vayan a segunda línea si no entran */
+        justify-content: center;
+    }
+
+    .main-nav ul li a {
+        font-size: 0.95em; /* Reduce el tamaño del texto */
+        padding: 6px 0; /* Menos padding vertical */
+    }
+
+    .header-cta-buttons {
+        gap: 10px; /* Menos espacio entre botones */
+        flex-wrap: wrap; /* Que se acomoden si no caben */
+        justify-content: center;
+    }
+}
+
+/* --- Hero Text Section --- */
+.hero-text {
+    text-align: center;
+    padding-bottom: 120px; /* Más padding inferior */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    margin-bottom: -60px; /* Superposición un poco más agresiva */
+    position: relative;
+    z-index: 5;
+}
+
+
+.btn-container {
+    margin-top: 40px; /* Más espacio */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los botones */
+}
+/* HASTA AQUI */
+
 .about__info {
     background-color: var(--colorUno);
     color: white;
@@ -93,7 +256,40 @@ header p {
         font-size: 3.5rem;
     }
 }
+/* --- Sección Problema-Solución --- */
+.problem-solution-section {
+    background-color: var(--colorUno);
+    padding: 80px 0;
+}
 
+.problem-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.problem-item, .solution-item {
+    background-color: white;
+    color: var(--colorSeis);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.problem-item h3, .solution-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: var(--colorUno);
+}
+
+.problem-item {
+    border-top: 5px solid var(--colorDos);
+}
+.solution-item {
+    border-top: 5px solid var(--colorCinco);
+}
 /*Parte 4(Funcionalidades)-(Emilio Gávilanez)*/
 
 .how-it-works__title {
@@ -108,7 +304,7 @@ header p {
 }
 
 .funcionalidades {
-    background-color: var(--colorFondoFuncionalidades);
+    background-color: #1c0029;
     padding: 3rem 1rem;
 }
 
@@ -121,7 +317,7 @@ header p {
 }
 
 .funcionalidad__item {
-    background-color: var(--colorTarjetaFuncionalidad);
+    background-color: #8e296a;
     color: white;
     border-radius: 12px;
     text-align: center;
@@ -200,8 +396,8 @@ header p {
 } 
 /*Parte 5(Equipo)-(Melany Perugachi)*/
 .explora {
-    background-color: white;
-    padding: 3rem 1rem;
+    background-color: var(--colorUno);
+    padding: 80px 0;
     width: 100%;
 }
 .explora-conecta {
@@ -217,21 +413,30 @@ header p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    margin-top: 20px;
 }
 
 .paso {
-  width: 250px;
-  height: 300px;
+    width: 250px;
+    height: 300px;
     background: white;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
+}
+.paso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 .paso img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .paso h3 {
@@ -245,83 +450,132 @@ header p {
     color: #333;
 }
 /*Parte 6(Informacion)-(Jhonatan Ruiz)*/
+.download-cta-section {
+    background: linear-gradient(90deg, var(--colorUno), var(--colorTres));
+    color: white;
+    text-align: center;
+}
 
+.download-cta-section .section-title {
+    color: white;
+    font-size: 2.8rem;
+}
+
+.download-cta-section p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.app-buttons-cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.app-buttons-cta .btn {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: var(--colorUno);
+    font-weight: bold;
+}
+
+.app-buttons-cta .btn img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.app-buttons-cta .btn:hover {
+    background-color: var(--colorSeis);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Footer */
 .footer {
-  background: linear-gradient(90deg, var(--colorUno), var(--colorTres));
-  color: white;
-  width: 100%;
-  padding: 40px 20px;
+    background: linear-gradient(90deg, var(--colorUno), var(--colorTres));
+    color: white;
+    width: 100%;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-section {
-  flex: 1 1 300px;
-  margin: 10px;
+    flex: 1 1 300px;
+    margin: 10px;
 }
 
 .footer-section h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .footer-section ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-section a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .footer-section a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 .app-buttons {
-  display: flex;
-  gap: 30px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 .app-buttons img {
-  height: auto;
-  width: 200px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
+    height: auto;
+    width: 200px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
 .app-buttons img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-  .funcionalidades {
+.funcionalidades {
     background-color: #1c0029;
     padding: 3rem 1rem;
-  }
+}
 
-  .funcionalidades__grid {
+.funcionalidades__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
-  }
+}
 
-  .funcionalidad__item {
+.funcionalidad__item {
     background-color: #8e296a; 
     color: white;
     border-radius: 12px;
@@ -329,22 +583,22 @@ header p {
     padding: 1.5rem 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease;
-  }
+}
 
-  .funcionalidad__item img {
+.funcionalidad__item img {
     width: 60px;
     height: 60px;
     margin-bottom: 1rem;
     object-fit: contain;
-  }
+}
 
-  .funcionalidad__item p {
+.funcionalidad__item p {
     margin: 0;
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Lato', sans-serif;
-  }
+}
 
-  .funcionalidad__item:hover {
+.funcionalidad__item:hover {
     transform: scale(1.05);
-  }
+}
